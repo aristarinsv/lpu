@@ -91,21 +91,21 @@ window.addEventListener('load', function() {
         var phone = document.getElementById('phone').value = "";
     }
 
-    function saveFromTable(data) {
-        data= {};
+    function saveFromTable(dataForTable) {
+        dataForTable= {};
         for(j = 0; j < tabl.rows.length ; j++) {     
             for(k = 0; k < tabl.rows[j].cells.length ; k++) {   
-                if(typeof data[j] == 'undefined') {
-                    data[j] = {'full_name':'', 'address':'', 'phone':''};
+                if(typeof dataForTable[j] == 'undefined') {
+                    dataForTable[j] = {'full_name':'', 'address':'', 'phone':''};
                 } 
                 if(tabl.rows[j].cells[k].classList.contains('address')) {
-                    data[j]['address'] = tabl.rows[j].cells[k].textContent;
+                    dataForTable[j]['address'] = tabl.rows[j].cells[k].textContent;
                 }
                 if(tabl.rows[j].cells[k].classList.contains('full_name')) {
-                    data[j]['full_name'] = tabl.rows[j].cells[k].textContent;
+                    dataForTable[j]['full_name'] = tabl.rows[j].cells[k].textContent;
                 }
                 if(tabl.rows[j].cells[k].classList.contains('phone')) {
-                    data[j]['phone'] = tabl.rows[j].cells[k].textContent;
+                    dataForTable[j]['phone'] = tabl.rows[j].cells[k].textContent;
                 }
             }
         }
