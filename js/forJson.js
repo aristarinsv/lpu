@@ -86,6 +86,7 @@ window.addEventListener('load', function() {
         var phone = document.getElementById('phone').value;
         dataForTable[max] = {"full_name":full_name, "address":address, "phone":phone};
         console.log(dataForTable);
+        editJSON(); 
         createTable();
         var full_name = document.getElementById('full_name').value = "";
         var address = document.getElementById('address').value = "";
