@@ -1,5 +1,5 @@
 # lpu
-Copy all files into (Document root)
+Copy all files into (Document root)  
 **Folder structure**
 (Document root)/index.htm  
 (Document root)/js  
