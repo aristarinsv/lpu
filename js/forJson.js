@@ -91,7 +91,7 @@ window.addEventListener('load', function() {
         var phone = document.getElementById('phone').value = "";
     }
 
-    function saveFromTable(dataForTable) {
+    function saveFromTable() {
         dataForTable= {};
         for(j = 0; j < tabl.rows.length ; j++) {     
             for(k = 0; k < tabl.rows[j].cells.length ; k++) {   
