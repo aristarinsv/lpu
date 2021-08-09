@@ -109,6 +109,7 @@ window.addEventListener('load', function() {
                 }
             }
         }
+        console.log(dataForTable);
     }
 
     function createTable() {
@@ -170,6 +171,19 @@ window.addEventListener('load', function() {
     }
 
 
+    function editJSON() {
+        let xhr = new XMLHttpRequest();
+        let url = "http://aristarin.ru/tojson.php";
+        xhr.open("POST", url, true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log('ddd', this.responseText);
+          }
+        };
+        sendData = JSON.stringify(dataForTable);
+        xhr.send(sendData);
+      }
+
 
 
     function download(content, fileName, contentType) {
@@ -180,7 +194,8 @@ window.addEventListener('load', function() {
         a.click();
     }
     document.querySelector('.saveToFile').addEventListener('click', e => {
-        download(dataForTable, 'result.json', 'text/plain');            
+        //download(dataForTable, 'result.json', 'text/plain'); 
+        editJSON();           
     });
 
     setChangeListener(tabl, function(event){
