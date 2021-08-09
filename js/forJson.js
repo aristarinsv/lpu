@@ -65,6 +65,7 @@ window.addEventListener('load', function() {
                 }
             }
         }
+        editJSON(); 
         createTable();
 
     }
@@ -83,7 +84,7 @@ window.addEventListener('load', function() {
         var full_name = document.getElementById('full_name').value;
         var address = document.getElementById('address').value;
         var phone = document.getElementById('phone').value;
-        dataForTable[max] = {"full_name":full_name, "address'":address, "phone":phone};
+        dataForTable[max] = {"full_name":full_name, "address":address, "phone":phone};
         console.log(dataForTable);
         createTable();
         var full_name = document.getElementById('full_name').value = "";
@@ -110,6 +111,7 @@ window.addEventListener('load', function() {
             }
         }
         console.log(dataForTable);
+        editJSON(); 
     }
 
     function createTable() {
@@ -186,17 +188,17 @@ window.addEventListener('load', function() {
 
 
 
-    function download(content, fileName, contentType) {
+    /*function download(content, fileName, contentType) {
         var a = document.createElement("a");
         var file = new Blob([JSON.stringify(content)], {type: contentType});
         a.href = URL.createObjectURL(file);
         a.download = fileName;
         a.click();
-    }
-    document.querySelector('.saveToFile').addEventListener('click', e => {
+    }*/
+    /*document.querySelector('.saveToFile').addEventListener('click', e => {
         //download(dataForTable, 'result.json', 'text/plain'); 
         editJSON();           
-    });
+    });*/
 
     setChangeListener(tabl, function(event){
 
@@ -226,7 +228,7 @@ window.addEventListener('load', function() {
         }
         if(event.type === 'blur'){
             saveFromTable(dataForTable);
-            console.log(10);
+            //console.log(10);
         }
     });
 
