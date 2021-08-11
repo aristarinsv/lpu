@@ -222,6 +222,9 @@ window.addEventListener('load', function() {
                 delRec.setAttribute('disabled', true);
             }
         }
+        if(event.type === 'mouseup') {
+            saveFromTable();
+        }
         if(event.type === 'blur'){
             saveFromTable();
             //console.log(10);
