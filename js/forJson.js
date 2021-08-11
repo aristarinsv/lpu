@@ -12,15 +12,11 @@ window.addEventListener('load', function() {
     xmlhttp.send();
 
 
-    function addFromUrl(s, jsonFromfile){
+    function addFromUrl(s){
         jsonFromfile = s.responseText;
         parse(s.responseText);
     }
 
-
-    function saveFile() {
-
-    }
 
     document.addEventListener('dragover', ev => ev.preventDefault())
     document.addEventListener('drop', ev => ev.preventDefault())
