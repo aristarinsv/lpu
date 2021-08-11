@@ -158,11 +158,11 @@ window.addEventListener('load', function() {
     function setChangeListener (tb, listener) {
 
         tb.addEventListener("blur", listener);
-        /*tb.addEventListener("keyup", listener);
+        tb.addEventListener("keyup", listener);
         tb.addEventListener("paste", listener);
         tb.addEventListener("copy", listener);
         tb.addEventListener("cut", listener);
-        tb.addEventListener("delete", listener);*/
+        tb.addEventListener("delete", listener);
         tb.addEventListener("mouseup", listener);
 
         tb.addEventListener("click", listener);
@@ -179,7 +179,7 @@ window.addEventListener('load', function() {
             console.log('ddd', this.responseText);
           }
         };
-        sendData = JSON.stringify(dataForTable);
+        var sendData = JSON.stringify(dataForTable);
         xhr.send(sendData);
       }
 
@@ -221,10 +221,9 @@ window.addEventListener('load', function() {
             } else {
                 delRec.setAttribute('disabled', true);
             }
-
         }
         if(event.type === 'blur'){
-            saveFromTable(dataForTable);
+            saveFromTable();
             //console.log(10);
         }
     });
