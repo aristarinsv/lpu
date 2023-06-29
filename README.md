@@ -8,4 +8,3 @@ Copy all files into (Document root)
 (Document root)/lpu.json  
   
 php is required    
-The working example is in http://aristarin.ru
